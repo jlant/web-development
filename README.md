@@ -1,2 +1,2 @@
 # web-development
-Repository for the Udacity course on web development.
+[Udacity web development course](https://www.udacity.com/course/cs253).

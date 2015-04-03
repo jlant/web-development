@@ -1,7 +1,7 @@
 import webapp2
 
 form = """
-<form action="/testform">
+<form method="post" action="/testform">
     <input name="q">
     <input type="submit">
 </form>
@@ -14,10 +14,18 @@ class MainPage(webapp2.RequestHandler):
 
 class TestHandler(webapp2.RequestHandler):
     def get(self):
+        q = self.request.get("q")
+        self.response.out.write(q)
+
+        # self.response.headers["Content-Type"] = "text/plain"
+        # self.response.write(self.request)  # write out the request
+
+    def post(self):
         # q = self.request.get("q")
         # self.response.out.write(q)
+
         self.response.headers["Content-Type"] = "text/plain"
-        self.response.write(self.request)
+        self.response.write(self.request)  # write out the request
 
 application = webapp2.WSGIApplication([('/', MainPage),
                                        ('/testform', TestHandler)],

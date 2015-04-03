@@ -32,4 +32,11 @@ Whatever is typed in box will be updated in url after enter is pressed
 
 ### Action
 
-Changes where a form submits to
+```
+<form action="http://www.google.com/search">
+    <input name="q">
+    <input type="submit">
+</form>
+```
+
+Changes where a form submits too; above submits to google's search

@@ -75,7 +75,7 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/html'
         self.write_form()
 
-    # post handler - posts to the url which happends when we submit the form
+    # post handler - posts to the url which happens when we submit the form
     def post(self):
 
         user_month = self.request.get("month")

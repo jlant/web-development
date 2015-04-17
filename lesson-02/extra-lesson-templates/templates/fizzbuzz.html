@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <form>
+        <h2>FizzBuzz</h2>
+
+        <ol>
+        {% for i in range(1, n+1) %}
+            <li>
+            {% if i % 3 == 0 and i % 5 == 0 %}
+                FizzBuzz
+            {% elif i % 3 == 0 %}
+                Fizz
+            {% elif i % 5 == 0 %}
+                Buzz
+            {% else %}
+                {{ i }}
+            {% endif %}
+            </li>
+        {%  endfor %}
+        </ol>
+
+    </form>
+</body>
+</html>
